@@ -1,6 +1,11 @@
 # Variables, Expressions & Statements
 
-hrs = float(input("Enter hours: "))
-rate = float(input("Enter rate per hour: "))
-pay =  hrs * rate
-print("Your pay is: $" ,pay)
+def Compute(hrs,rate):
+   pay=float(hrs)*float(rate)
+   return pay
+
+x = input("enter the no of hours")
+y = input("enter the rate")
+
+
+Compute(int(hrs),int(rate)
