@@ -1,11 +1,11 @@
 # Variables, Expressions & Statements
 
-def Compute(hrs,rate):
+def Compute(hrs,rate,pay):
    pay=float(hrs)*float(rate)
    return pay
 
-x = input("enter the no of hours")
-y = input("enter the rate")
+hrs = input("enter the no of hours: ")
+rate = input("enter the rate: ")
 
-
-Compute(int(hrs),int(rate)
+Compute(int(hrs),int(rate), int(pay))
+print("The total pay is: ", pay)
