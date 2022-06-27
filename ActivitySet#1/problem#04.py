@@ -1,28 +1,18 @@
 # Conditional Execution
 
-def compute(Working, PPW):
-  if Working > 40:
-    bonusrate = PPW * 1.5
-    bonuspay = (Working - 40) * bonusrate
-    pay = ((Working - (Working - 40)) * PPW) + bonuspay
-  else:
-    pay = Working * PPW
-    print("Your pay is: $", pay)
-    return pay
-
-
-hrs = input("Enter hours: ")
-rate = input("Enter rate per hour: ")
-try:
-  Working = float(hrs)
-  PPW = float(rate)
-except:
-  print("Enter in numeric form :(")
-  quit()
-if Working > 40:
-  bonusrate = PPW * 1.5
-  bonuspay = (Working - 40) * bonusrate
-  pay = ((Working - (Working - 40)) * PPW) + bonuspay
-else:
-  pay = Working * PPW
-print("Your pay is: $", pay)
+def computation(h,r):
+	if h <= 40:
+	 	return h*r
+	elif h > 40:
+		return 40*r+(h-40)*1.5*r
+    
+def output(wage):
+	print ("Earning",wage)
+  
+def main():
+	hours=float(input("Enter Hours:"))
+	rate= float(input("Enter the Rate:"))
+	wage=computation(hours,rate)
+	output(wage)
+	
+main()
