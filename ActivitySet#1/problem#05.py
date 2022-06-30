@@ -1,24 +1,20 @@
 # Functions
 
 
-def computepay(Working, PPW):
-    if Working > 40:
-      bonusrate = PPW * 1.5
-      bonuspay = (Working - 40) * bonusrate
-      xp = ((Working - (Working - 40)) * PPW) + bonuspay
+def computepay(h,r):
+    if h > 40:
+        p = 1.5 * r * (h - 40) + (40 *r)
     else:
-      xp = Working * PPW
-    return xp
-
-hrs = input("Enter hours: ")
-rate = input("Enter rate per hour: ")
-try:
-  Working = float(hrs)
-  PPW = float(rate)
-except:
-  print("Enter in numeric form :(")
-  quit()
-
-pay = computepay(Working, PPW)
-
-print("Your pay is: $", pay)
+        p = h * r
+    return p
+  
+def main():
+	
+	hrs = input("Enter Hours:")
+	hr = float(hrs)
+	rphrs = input("Enter rate per hour:")
+	rphr = float(rphrs)
+	p = computepay(hr,rphr)
+	print("Pay",p)
+  
+main()   
