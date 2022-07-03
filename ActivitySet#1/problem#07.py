@@ -1,7 +1,17 @@
 # Strings
 
-text = "X-DSPAM-Confidence:    0.8475"
-ipos = text.find(':')
-piece = text[ipos+2:]
-value = float(piece)
-print(value)
+def myinput():
+    text = "X-DSPAM-Confidence:    0.8475"
+    return text
+  
+def convert(text):
+    Pos = text.find(':')
+    last = text[Pos+1:]
+    end = float(last)
+    print(end)
+  
+def main():
+    text=myinput()
+    convert(text)
+  
+main()
