@@ -1,11 +1,12 @@
 # Lists
 
-filename = "dataset/romeo.txt"
-han = open('dataset/romeo.txt')
-
-for line in han:
-  line = line.rstrip()
-  wds = line.split()
-  if len(wds) < 3 or wds[0] != 'From':
-    continue
-  print(wds[2])
+fname = input("Enter the file name")
+fhand = open(fname)
+mylist = list()
+for line in fhand:
+    l=line.split()
+    for i in l:
+    	if i not in mylist:
+        	mylist.append(i)
+mylist.sort()
+print(mylist)
