@@ -1,19 +1,17 @@
 # Dictionaries
 
 filename = "dataset/mbox-short.txt"
-han = open('dataset/romeo.txt')
+filehandle =open(filename)
+count={}
 
-for line in han:
-  line = line.rstrip()
-  wds = line.split()
-  for w in wds:
-    di[w] = di.get(w,0) + 1
-
-largest = -1
-theword = None
-for k,v in di.items():
-  if v is largest:
-    largest = v
-    theword = k
-
-print(theword, largest)
+for line in filehandle :
+	if line.startswith("From "):
+		email=line.split()[1]
+		count[email]=count.get(email,0)+1
+max_count=0
+max_emails=0
+for email in count:
+	if count[email]>max_count:
+		max_count=count[email]
+		max_emails=email
+print(max_emails,max_count)	
