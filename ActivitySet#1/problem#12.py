@@ -1,7 +1,8 @@
 # Regular Expressions
 # https://www.py4e.com/lessons/regex
+
+import re
 def file():
-  import re
   file=open("dataset/regex.txt")
   s=[]
   sum=0
@@ -13,3 +14,7 @@ def file():
   for n in s:
     sum=sum+int(n)
   print(sum)
+
+
+
+file()
